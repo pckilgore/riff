@@ -1,0 +1,22 @@
+{
+  "name": "riff",
+  "version": "0.0.1",
+  "description": "A correct by configuration, PDD, DDD, and TDD driven backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Write tests!!!!\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pckilgore/riff.git"
+  },
+  "author": "Patrick Kilgore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pckilgore/riff/issues"
+  },
+  "homepage": "https://github.com/pckilgore/riff#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
