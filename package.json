@@ -4,7 +4,8 @@
   "description": "A correct by configuration, PDD, DDD, and TDD driven backend.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Write tests!!!!\""
+    "test": "echo \"Write tests!!!!\"",
+    "deploy": "now && now alias"
   },
   "repository": {
     "type": "git",
