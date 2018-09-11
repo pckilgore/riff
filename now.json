@@ -1,6 +1,4 @@
 {
   "name": "riff-default",
-  "public": true,
-  "type": "docker",
-  "alias": ["riff-api"]
+  "type": "static"
 }
