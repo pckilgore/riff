@@ -2,9 +2,12 @@
   "name": "riff",
   "version": "0.0.1",
   "description": "A correct by configuration, PDD, DDD, and TDD driven backend.",
-  "main": "index.js",
+  "main": "./server/server.js",
   "scripts": {
-    "test": "echo \"Write tests!!!!\"",
+    "test": "mocha # See ./tests/mocha.opts",
+    "test-deploy": "mocha --reporter min",
+    "tdd": "mocha --watch --reporter min",
+    "start": "node ./server/server.js",
     "deploy": "now && now alias"
   },
   "repository": {
@@ -19,5 +22,11 @@
   "homepage": "https://github.com/pckilgore/riff#readme",
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
   }
 }
