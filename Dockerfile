@@ -20,5 +20,4 @@ RUN rm -rf node_modules/ test/
 # Deploy
 ENV NODE_ENV=production
 RUN npm install # --silent (for later)
-EXPOSE 3000
 CMD ["npm", "start"]

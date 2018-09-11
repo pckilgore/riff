@@ -2,5 +2,8 @@
   "name": "riff-default",
   "public": true,
   "type": "docker",
+  "features": {
+    "cloud": "v2"
+  },
   "alias": ["riff-api"]
 }
