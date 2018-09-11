@@ -17,4 +17,4 @@ COPY . .
 
 EXPOSE 3000
 # Start our express server.
-CMD ["node", "server.js"]
+RUN npm start
