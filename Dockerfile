@@ -3,18 +3,22 @@ FROM mhart/alpine-node
 #Set up default working directory
 WORKDIR /usr/src
 # We will uncomment this later when it matters.
-# ENV NODE_ENV=production
 # RUN apk add -no-cache git
 
 # Install deps from package
-# COPY package.json package-lock.json ./
-# RUN npm install # --silent (for later)
+COPY package.json package-lock.json ./
+RUN npm install
 
-COPY test.html .
+COPY . .
 
-# Testing (for later)
-# RUN npm test
+# Run unit testing
+RUN npm run test-deploy
 
-# Trigger a static deploy to now, for ... now.
-RUN mkdir /public
-RUN mv test.html /public
+# Discard test artifacts.
+RUN rm -rf node_modules/ test/
+
+# Deploy
+ENV NODE_ENV=production
+RUN npm install # --silent (for later)
+EXPOSE 3000
+CMD ["npm", "start"]
