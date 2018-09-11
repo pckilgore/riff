@@ -1,4 +1,5 @@
 {
   "name": "riff-default",
-  "type": "docker"
+  "type": "docker",
+  "alias": ["riff-api"]
 }
