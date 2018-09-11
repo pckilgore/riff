@@ -5,6 +5,7 @@
   "main": "./server/server.js",
   "scripts": {
     "test": "mocha # See ./tests/mocha.opts",
+    "test-deploy": "mocha --reporter min",
     "tdd": "mocha --watch --reporter min",
     "start": "node ./server/server.js",
     "deploy": "now && now alias"
