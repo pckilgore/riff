@@ -2,13 +2,13 @@ language: node_js
 node_js:
   - node
 dist: trusty
+sudo: false
 branches:
   only:
     - master
 cache:
   directories:
     - $HOME/.npm
-script: npm test
 before_deploy: npm install now --no-save
 deploy:
   - provider: script

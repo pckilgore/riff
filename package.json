@@ -4,9 +4,11 @@
   "description": "A correct by configuration, PDD, DDD, and TDD driven backend.",
   "main": "./server/server.js",
   "scripts": {
-    "test": "mocha # See ./tests/mocha.opts",
+    "test": "npm run lint && NODE_ENV='test' mocha # See ./tests/mocha.opts",
     "test-deploy": "mocha --reporter min",
     "tdd": "mocha --watch --reporter min",
+    "precommit": "prettier --write \"**/*.{js,jsx,json,css,scss,md}\"",
+    "lint": "eslint ./ --ignore-path .prettierignore --ignore-pattern *.min.*",
     "start": "node ./server/server.js",
     "deploy": "now",
     "DANGER-deploy-alias": "now --public && now alias"
@@ -27,7 +29,12 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "husky": "^0.14.3",
     "mocha": "^5.2.0",
+    "prettier": "^1.14.2",
     "supertest": "^3.3.0"
   }
 }
