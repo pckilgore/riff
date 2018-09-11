@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - node
+dist: trusty
+branches:
+  only:
+    - master
+cache:
+  directories:
+    - $HOME/.npm
+script: npm test
+before_deploy: npm install now --no-save
+deploy:
+  - provider: script
+    script: now --token $NOW_TOKEN --public && now alias --token $NOW_TOKEN
+    skip_cleanup: true
+    on:
+      master: true
