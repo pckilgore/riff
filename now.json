@@ -1,3 +1,4 @@
 {
-  "name": "riff-default"
+  "name": "riff-default",
+  "type": "docker"
 }
